@@ -12,12 +12,12 @@ version = "0.14.0~ynh1"
 maintainers = ["eric_G"]
 
 [upstream]
-license = "free"
+license = "AGPL-3.0"
 website = "https://bileto.fr/"
 demo = "https://demo.example.com"
 admindoc = "https://github.com/Probesys/bileto/blob/main/docs/administrators/deploy.md"
 userdoc = "https://yunohost.org/apps"
-code = "https://some.forge.com/example/example"
+code = "https://github.com/Probesys/bileto"
 
 [integration]
 yunohost = ">= 12.0.9"
@@ -53,7 +53,6 @@ ram.runtime = "50M"
     default = "fr_FR"
 
     [install.admin]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
     type = "user"
 
     [install.password]
@@ -83,10 +82,8 @@ ram.runtime = "50M"
     [resources.permissions]
     main.url = "/"
 
-    [resources.ports]
-
     [resources.apt]
-    packages = "postgresql, php8.2-zip, php8.2-curl, php8.2-gd, php8.2-cli, php8.2-psql, php8.2-xml, php8.2-mbstring"
+    packages = "postgresql, php8.4-ldap, php8.4-zip, php8.4-curl, php8.4-gd, php8.4-cli, php8.4-psql, php8.4-xml, php8.4-mbstring"
 
     [resources.database]
     type = "postgresql"
